@@ -42,7 +42,7 @@ public:
         // YOUR CODE HERE
         name="Unknown";
         id=0;
-        gpa=0;
+        gpa=0.0;
     }
 
     // TODO 1b: Parameterized constructor
@@ -107,8 +107,9 @@ public:
     // If out of range, keep current GPA.
     void setGpa(double g) {
         // YOUR CODE HERE
-        if(gpa<0.0||gpa>4.0){
-            throw invalid_argument ("GPA must be between 0.0 and 4.0");
+        if(g>=0.0&& g<=4.0){
+            gpa = g;
+            
         }
     }
 
@@ -149,7 +150,7 @@ public:
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
         // YOUR CODE HERE
-        os<<"Student("<<s.name<<", ID:"<< s.id<<", GPA:"<< s.gpa<<")";
+        os <<"Student("<<s.name<<", ID:" << s.id <<", GPA:"<< s.gpa<<")";
         return os;
     }
 };
