@@ -121,8 +121,8 @@ public:
     string getFormattedName() const {
         // YOUR CODE HERE
         string result = name;
-        for(int i=0;i<result.length();i++){
-            result[i]=toupper(name[i]);
+        for(int i = 0; i<result.length() ;i++){
+            result[i]= toupper(result[i]);
         }
         
         return result;
@@ -150,7 +150,7 @@ public:
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
         // YOUR CODE HERE
-        os <<"Student("<<s.name<<", ID:" << s.id <<", GPA:"<< s.gpa<<")";
+        os << "Student("<<s.name<<", ID: "<< s.id <<", GPA:"<< s.gpa<<")";
         return os;
     }
 };
